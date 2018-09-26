@@ -1,0 +1,17 @@
+[
+  {
+    "modid": "libraryparadox",
+    "name": "Library Paradox",
+    "description": "A Library mod adding some useful functions",
+    "version": "1.0.0",
+    "mcversion": "1.12.2",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "Redstone Paradox"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": []
+  }
+]
