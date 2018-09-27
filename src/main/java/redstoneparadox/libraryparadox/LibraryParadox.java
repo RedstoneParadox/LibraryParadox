@@ -12,8 +12,7 @@ import redstoneparadox.libraryparadox.signals.Switchboard;
 @Mod(
         modid = LibraryParadox.MOD_ID,
         name = LibraryParadox.MOD_NAME,
-        version = LibraryParadox.VERSION,
-        useMetadata = true
+        version = LibraryParadox.VERSION
 )
 public class LibraryParadox {
 
