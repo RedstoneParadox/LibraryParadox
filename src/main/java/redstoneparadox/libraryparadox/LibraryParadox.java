@@ -37,7 +37,7 @@ public class LibraryParadox {
      */
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent event) {
-        MinecraftForge.EVENT_BUS.register(this);
+
         MinecraftForge.EVENT_BUS.register(new LPEventHandler());
         logger = event.getModLog();
         switchboard = new Switchboard();
