@@ -12,17 +12,10 @@ import java.util.Map;
 public final class Switchboard{
 
     private Map<String, ArrayList<ISignalReceiver>> signals = new HashMap<>();
+    private Map<String, ArrayList<ISignalReceiver>> clientSignals = new HashMap<>();
+    private Map<String, ArrayList<ISignalReceiver>> serverSignals = new HashMap<>();
 
     public void addSignal(String signal) {
-        if (signals.get(signal) == null) {
-            signals.put(signal, new ArrayList());
-        }
-        else {
-            LibraryParadox.logger.error("Signal " + signal + " already exists!");
-        }
-    }
-
-    public void addProtectedSignal(String signal) {
         if (signals.get(signal) == null) {
             signals.put(signal, new ArrayList());
         }
@@ -38,6 +31,12 @@ public final class Switchboard{
         else {
             LibraryParadox.logger.error("Signal " + signal + " does not exist!");
         }
+    }
+
+    @Deprecated
+    public void addProtectedSignal(String signal) {
+        LibraryParadox.logger.error("Switchboard#addProtectedSignal() never did anything special in the first place. Just use Switchboard#addSignal().");
+        addSignal(signal);
     }
 
     public void addReceiver(ISignalReceiver receiver, String signal) {
