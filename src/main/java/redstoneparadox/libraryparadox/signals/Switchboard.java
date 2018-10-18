@@ -12,8 +12,6 @@ import java.util.Map;
 public final class Switchboard{
 
     private Map<String, ArrayList<ISignalReceiver>> signals = new HashMap<>();
-    private Map<String, ArrayList<ISignalReceiver>> clientSignals = new HashMap<>();
-    private Map<String, ArrayList<ISignalReceiver>> serverSignals = new HashMap<>();
 
     public void addSignal(String signal) {
         if (signals.get(signal) == null) {
